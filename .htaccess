@@ -1,0 +1,8 @@
+RewriteEngine On
+#если запрошенного файла или папки не существует
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+
+RewriteRule ^(.*)/(.*)/(.*)/?$ /go.php?to=$3  [L,QSA]
